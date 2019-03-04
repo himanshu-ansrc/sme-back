@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const config = require('../config')
 module.exports = {
 
-	   //MIDDLEWARE FUNCTIONS 
+	   //MIDDLEWARE FUNCTIONS
         middleware_authenticate: async (req,res, next)=>{
         	 if(req.headers['token']){
                 const token = req.headers['token'];
@@ -21,9 +21,9 @@ module.exports = {
                 return res.redirect('http://localhost:8080');
         	 }else{
                 return res.redirect('http://localhost:8080');
-        	 }  	 
+        	 }
         },
-	   //MIDDLEWARE FUNCTIONS END 
+	   //MIDDLEWARE FUNCTIONS END
 
 
 	   load_admin_dashboard : (req, res)=>{
@@ -62,7 +62,7 @@ module.exports = {
              		res.status(400).json({error: "error"})
              	}
              }else{
-                             
+
              }
        	  }catch(e){
 
@@ -75,16 +75,16 @@ module.exports = {
                  if(decoded){
 	                 try{
 	                    const user = await User.findById(decoded['data']);
-	       	      	    res.status(200).json({ token : decoded});  
+	       	      	    res.status(200).json({ token : decoded});
 	       	      	 }catch(e){
-	                    res.status(400).json({ error : "user not found"}); 
+	                    res.status(400).json({ error : "user not found"});
 	       	      	 }
                  }else{
                      res.status(400).json({ error : "user not found"});
                  }
 
        	      }catch(e){
-                    res.status(400).json({ error : "user not found"}); 
+                    res.status(400).json({ error : "user not found"});
        	      }
        }
 
