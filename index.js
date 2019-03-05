@@ -8,7 +8,7 @@ const express = require('express'),
 
 
   
-  mongoose.connect(config.DB_URL)
+  mongoose.connect(config.DB_URL, { useNewUrlParser: true })
   app.use(bodyParser.urlencoded({ extended: false }))
   app.use(bodyParser.json())
 
