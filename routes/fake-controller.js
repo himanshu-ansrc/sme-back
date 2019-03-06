@@ -46,10 +46,16 @@ module.exports = {
                  cost: {
                        fixed: Math.floor((Math.random() * 10) + 1),
                        range: {
-                          max : Math.floor((Math.random() * 10) + 1),
-                          min: Math.floor((Math.random() * 10) + 1)
+                          max : Math.floor((Math.random() * 10) + 5),
+                          min: Math.floor((Math.random() * 5) + 1)
                        }
                  },
+                 vetting:{
+                    education: Math.floor((Math.random() * 1) + 0),
+                    experience: Math.floor((Math.random() * 1) + 0),
+                    badges:Math.floor((Math.random() * 1) + 0),
+                    certificates:Math.floor((Math.random() * 1) + 0)
+                },
                })
            }
            const bulkInsert = await Ecs.insertMany(dataObj);
