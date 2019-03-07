@@ -1,5 +1,6 @@
 const User = require('../models/user');
 const jwt = require('jsonwebtoken');
+const Ecs = require('../models/candidates');
 const config = require('../config')
 module.exports = {
 
@@ -82,10 +83,32 @@ module.exports = {
                  }else{
                      res.status(400).json({ error : "user not found"});
                  }
-
        	      }catch(e){
                     res.status(400).json({ error : "user not found"});
        	      }
+       },
+
+       listCandidates: async (req, res)=>{
+             const SearchKeys = {};
+             if(req.query){
+                if(req.query['id']){
+                   SearchKeys['_id'] = req.query['id'].trim();
+                }
+                if(req.query['skills']){
+                   SearchKeys['skills']['secondry'] = {$in : (req.query['skills'].trim()).split(',')}
+                }
+             }
+             try{
+                const candidates = await Ecs.find(SearchKeys);
+                res.status(200).send({
+                     data: candidates
+                });
+             }catch(e){
+                console.log(e)
+                res.status(400).send({
+                     error: "user not found"
+                })
+             }
        }
 
 

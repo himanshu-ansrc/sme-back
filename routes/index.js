@@ -14,6 +14,10 @@ module.exports = (router)=>{
 	 router.route('/authenticate')
 	       .post( controller.authenticate);	 
 
+
+	 router.route('/list-candidates')
+	       .get( controller.listCandidates);	 
+
 	 //test
 	 router.route('/admin-dashboard')
            .post(controller.middleware_authenticate, controller.load_admin_dashboard)
