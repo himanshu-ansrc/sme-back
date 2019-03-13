@@ -35,12 +35,12 @@ const UserSchema = new mongoose.Schema({
      ref: 'projects',
      status: {type:Boolean, default: CONFIG.DB.DEFAULT.OFF}
    }],
-   vetting:[{
+   vetting:{
     education: {type:Number, default: CONFIG.DB.DEFAULT.OFF},
     experience: {type:Number, default: CONFIG.DB.DEFAULT.OFF},
     badges:{type:Number, default: CONFIG.DB.DEFAULT.OFF},
     certificates:{type:Number, default: CONFIG.DB.DEFAULT.OFF}
-   }],
+   },
    skills: {
           primary : String,
           secondry: [{type: String}]

@@ -90,16 +90,21 @@ module.exports = {
 
        listCandidates: async (req, res)=>{
              const SearchKeys = {};
+             console.log(req.query)
              if(req.query){
                 if(req.query['id']){
                    SearchKeys['_id'] = req.query['id'].trim();
                 }
+                // if(req.query['skills']){
+                //    SearchKeys['skills']['secondry'] = {$in : (req.query['skills'].trim()).split(',')}
+                // }
                 if(req.query['skills']){
-                   SearchKeys['skills']['secondry'] = {$in : (req.query['skills'].trim()).split(',')}
+                   SearchKeys['skills'] = {}; 
+                   SearchKeys['skills']['primary'] = req.query['skills']
                 }
              }
              try{
-                const candidates = await Ecs.find(SearchKeys);
+                const candidates = await Ecs.find(SearchKeys).limit(10);
                 res.status(200).send({
                      data: candidates
                 });

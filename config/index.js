@@ -1,5 +1,5 @@
 module.exports = {
-   PORT : 3000 || process.env.PORT,
+   PORT : 8080 || process.env.PORT,
    DB_URL: 'mongodb+srv://sme:sme123@cluster0-eed2c.mongodb.net/sme?retryWrites=true',
    DB:{
       DEFAULT: {

@@ -18,7 +18,7 @@ const express = require('express'),
   app.use(require('./routes')(router));
 
 
-  app.listen(3000, (err)=>{
+  app.listen(8080, (err)=>{
       if(err) throw err;
       console.log("server is running on port 3000");
   });
