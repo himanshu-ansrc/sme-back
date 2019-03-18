@@ -1,7 +1,11 @@
 const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 const Ecs = require('../models/candidates');
-const config = require('../config')
+const Projects = require('../models/Projects');
+const config = require('../config');
+const LOCATIONS = require('../models/location');
+const SKILLS = require('../models/skills');
+
 module.exports = {
 
 	   //MIDDLEWARE FUNCTIONS
@@ -58,7 +62,7 @@ module.exports = {
                 const password = !0//User.authenticate(req.body['password']);
              	if(password){
                    const token = jwt.sign({ data: result.id}, config.JWT_SECRET , { expiresIn: 60*60 });
-                         res.status(200).json({token})
+                         res.status(200).json({token, data: result})
              	}else{
              		res.status(400).json({error: "error"})
              	}
@@ -114,6 +118,29 @@ module.exports = {
                      error: "user not found"
                 })
              }
+       },
+       
+       skillsAndLocations: async (req, res)=>{
+             res.status(200).send({
+                 data: {
+                    skills: SKILLS,
+                    locations: LOCATIONS
+                 }
+             })
+       },
+
+       create_sme_request : async (req, res)=>{
+          try {
+             const projects = new Projects(req.body);
+             const data = await projects.save();
+             res.status(200).send({
+                 data
+             })
+          }catch(e) {
+               res.status(400).json({error: e})
+          }
        }
+
+
 
 }

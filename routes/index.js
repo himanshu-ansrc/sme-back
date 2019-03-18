@@ -9,14 +9,21 @@ module.exports = (router)=>{
             .post( controller.create);
 
 	 router.route('/login')
-	       .post( controller.login);
+	       .post(controller.login);
 
 	 router.route('/authenticate')
-	       .post( controller.authenticate);	 
+	       .post(controller.authenticate);	 
 
 
 	 router.route('/list-candidates')
-	       .get( controller.listCandidates);	 
+	       .get(controller.listCandidates);	 
+      
+     
+ 	 router.route('/skills_and_locations')
+       .get(controller.skillsAndLocations);	 
+
+	 router.route('/create-request')
+	       .post(controller.create_sme_request);	
 
 	 //test
 	 router.route('/admin-dashboard')

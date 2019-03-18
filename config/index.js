@@ -5,7 +5,8 @@ module.exports = {
       DEFAULT: {
       	   	  ON : 1,
    	          OFF: 0,
-   	          MIN: 0
+   	          MIN: 0,
+                STATUS: 0
       },
       LOCATION : {
       	 INDIA : 1
