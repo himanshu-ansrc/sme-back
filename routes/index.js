@@ -14,13 +14,11 @@ module.exports = (router)=>{
 	 router.route('/authenticate')
 	       .post(controller.authenticate);	 
 
-
 	 router.route('/list-candidates')
 	       .get(controller.listCandidates);	 
-      
      
  	 router.route('/skills_and_locations')
-       .get(controller.skillsAndLocations);	 
+           .get(controller.skillsAndLocations);	 
 
 	 router.route('/create-request')
 	       .post(controller.create_sme_request);	

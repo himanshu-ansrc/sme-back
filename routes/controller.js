@@ -7,7 +7,6 @@ const LOCATIONS = require('../models/location');
 const SKILLS = require('../models/skills');
 
 module.exports = {
-
 	   //MIDDLEWARE FUNCTIONS
         middleware_authenticate: async (req,res, next)=>{
         	 if(req.headers['token']){
@@ -29,8 +28,6 @@ module.exports = {
         	 }
         },
 	   //MIDDLEWARE FUNCTIONS END
-
-
 	   load_admin_dashboard : (req, res)=>{
            if(req.auth){
            	  res.send({
