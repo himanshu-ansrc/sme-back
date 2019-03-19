@@ -25,23 +25,23 @@ module.exports = {
                   name : faker.name.findName(),
                   email : faker.internet.email(),
                   contact : contactArr,
-                  title : SKILLS[randInt2]['title'],
+                  title : SKILLS[randInt2],
                   profile_pic: faker.image.avatar(),
                   location :{
-                      id : LOCATION[1][randInt-1]['id'],
-                      value: LOCATION[1][randInt-1]['city']
+                      id : LOCATION[randInt-1]['id'],
+                      value: LOCATION[randInt-1]['city']
                   },
                  total_exp :Math.floor((Math.random() * 10) + 1),
                  rel_exp :Math.floor((Math.random() * 10) + 1),
-                 avg_feedback :Math.floor((Math.random() * 10) + 1),
+                 avg_feedback :Math.floor((Math.random() * 5) + 1),
                  total_projects :Math.floor((Math.random() * 10) + 1),
                  qualification_documents : [{
                    degree: "bachelor",
                    certificates : ["http://resumecompanion.com/wp-content/uploads/2016/12/executive-assistant-resume-sample-summary-of-qualifications-download.jpg"]
                  }],
                  skills: {
-                          primary : SKILLS[randInt2]['skills'][Math.floor((Math.random() * Object.keys(SKILLS[randInt2]['skills']).length) + 1)],
-                          secondry: insertSkills(SKILLS[randInt2]['skills'])
+                          primary : SKILLS[Math.floor((Math.random() * Object.keys(SKILLS[randInt2]['skills']).length) + 1)],
+                          secondry: insertSkills(SKILLS[randInt2])
                  }, 
                  cost: {
                        fixed: Math.floor((Math.random() * 10) + 1),
