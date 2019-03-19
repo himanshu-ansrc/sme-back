@@ -1,72 +1,27 @@
 const CONFIG = require('../config');
-module.exports = {
-	 "1": {
-	 	 title: "Content Writers",
-	 	 skills:{ 	
-			"1": "Copy Writing",
-			"2": "Digital Media",
-			"3": "Drafting",
-			"4": "Editing",
-			"5": "Establishing Tone",
-			"6": "Formatting",
-			"7": "Grammar",
-			"8": "Identifying Theme",
-			"9": "Establishing Purpose",
-			"10": "Journalist Ethics",
-			"11": "Language",
-			"12": "Media",
-			'13': "Microsoft Office",
-			'14': "Proofreading",
-			"15": "Revising",
-			"16": "Spelling",
-			"17": "Structure",
-			"18": "Style",
-			"19": "Punctuation",
-			"20": "Strong Vocabulary",
-			"21": "Using the Rhetorical Triangle",
-			"22": "Devise Structure",
-			"23": "Establish Tone",
-			"24": "Copy Editing",
-	 	 }
-	 },
-	 "2": {
-	 	 title: "Media Writers",
-	 	 skills:{
-			"1": "Newsletters",
-			"2": "Business Storytelling",
-			"3": "Blog Writing",
-			"4": "Journalism",
-			"5": "News Writing",
-			"6": "Organizing",
-			"7": "Print Writing",
-			"8": "Identifying Theme",
-			"9": "Proposal Writing",
-			"10": "Presentation Writing",
-			"11": "Web Writing",
-			"12": "Social Media",
-			'13': "Creative Writing",
-			'14': "Feature Writing",
-			"15": "Magazine Writing"
-	 	 }
-	 }
-	 // "3": {
-	 // 	 title: "Product Manager",
-	 // 	 skills:{
-		// 	"1": "Newsletters",
-		// 	"2": "Business Storytelling",
-		// 	"3": "Blog Writing",
-		// 	"4": "Journalism",
-		// 	"5": "News Writing",
-		// 	"6": "Organizing",
-		// 	"7": "Print Writing",
-		// 	"8": "Identifying Theme",
-		// 	"9": "Proposal Writing",
-		// 	"10": "Presentation Writing",
-		// 	"11": "Web Writing",
-		// 	"12": "Social Media",
-		// 	'13': "Creative Writing",
-		// 	'14': "Feature Writing",
-		// 	"15": "Magazine Writing"
-	 // 	 }
-	 // }
-}
+module.exports = [
+	 	    {id: 1, value:  "Copy Writing"},
+        	{id: 2, value: "Digital Media"},
+			{id: 3, value: "Drafting"},
+			{id: 4, value: "Editing"},
+			{id: 5, value: "Establishing Tone"},
+			{id: 6, value: "Formatting"},
+			{id: 7, value: "Grammar"},
+			{id: 8, value : "Identifying Theme"},
+			{id: 9, value: "Establishing Purpose"},
+			{id: 10, value: "Journalist Ethics"},
+			{id: 11, value: "Language"},
+			{id: 12, value: "Media"},
+			{id: 13, value: "Microsoft Office"},
+			{id: 14, value: "Proofreading"},
+			{id: 15, value: "Revising"},
+			{id: 16, value: "Spelling"},
+			{id: 17, value: "Structure"},
+			{id: 18, value: "Style"},
+			{id: 19, value: "Punctuation"},
+			{id: 20, value: "Strong Vocabulary"},
+			{id: 21, value: "Using the Rhetorical Triangle"},
+			{id: 22, value: "Devise Structure"},
+			{id: 23, value: "Establish Tone"},
+			{id: 24, value: "Copy Editing"},
+	 	 ]

@@ -1,6 +1,5 @@
 const CONFIG = require('../config');
-module.exports = {
-	  [CONFIG.DB.LOCATION.INDIA] : [
+module.exports = [
              {
                 id: 1, 
                 state:  "delhi",
@@ -52,4 +51,3 @@ module.exports = {
                 city: "kolkata"	
              }
 	  ]
-}

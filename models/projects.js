@@ -8,15 +8,16 @@ const projectsSchema = new mongoose.Schema({
    description:{
       type: String
    },
+   job_type: Number,
    vacancies: {
       type: Number
    },
-   budget: Number,
+   budget: Number,  
    duration: { 
       start: Date,
       end: Date
    },
-   timeline : String,
+   timeline : Number,
    skills: [],
    location: Number,
    experience: Number,
